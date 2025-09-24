@@ -15,22 +15,21 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# The `io:LineStream` is used to initialize a stream of the type strings(lines). This `io:LineStream` refers to the
-# stream that is embedded to the I/O character channels.
+# The LineStream is a stream of the type strings(lines) and it refers to the stream that is embedded to the I/O character channels.
 public class LineStream {
     private ReadableCharacterChannel readableCharacterChannel;
     private boolean isClosed = false;
 
-    # Initialize an `io:LineStream` using an `io:ReadableCharacterChannel`.
+    # Initializes a LineStream.
     #
     # + readableCharacterChannel - The `io:ReadableCharacterChannel` that the line stream is referred to
     public isolated function init(ReadableCharacterChannel readableCharacterChannel) {
         self.readableCharacterChannel = readableCharacterChannel;
     }
 
-    # The next function reads and returns the next line of the related stream.
+    # Reads the next line of the stream.
     #
-    # + return - A line as a string when a line is avaliable in the stream or returns `()` when the stream reaches the end
+    # + return - A line as a string when a line is available in the stream or returns `()` when the stream reaches the end
     public isolated function next() returns record {|string value;|}|Error? {
         var line = readLine(self.readableCharacterChannel);
         if line is string {
@@ -44,8 +43,8 @@ public class LineStream {
         }
     }
 
-    # Closes the stream. The primary usage of this function is to close the stream without reaching the end
-    # If the stream reaches the end, the `LineStream.next()` will automatically close the stream.
+    # Closes the stream. This function is primarily used to close the stream before reaching the end.
+    # If the stream reaches the end, the next read operation will automatically close the stream.
     #
     # + return - `()` when the closing was successful or an `io:Error`
     public isolated function close() returns Error? {

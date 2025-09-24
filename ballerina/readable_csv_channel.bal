@@ -15,14 +15,14 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents a ReadableCSVChannel which could be used to read records from CSV file.
+# Represents a readable CSV channel which could be used to read records from CSV file.
 public class ReadableCSVChannel {
     private ReadableTextRecordChannel? dc;
 
-    # Constructs a CSV channel from a CharacterChannel to read CSV records.
+    # Initializes a CSV channel from a CharacterChannel to read CSV records.
     #
     # + byteChannel - The CharacterChannel, which will represent the content in the CSV file
-    # + fs - Field separator, which will separate between the records in the CSV file
+    # + fs - The field separator, which will separate between the records in the CSV file
     # + nHeaders - Number of headers, which should be skipped prior to reading records
     public isolated function init(ReadableCharacterChannel byteChannel, Separator fs = ",", int nHeaders = 0) {
         if fs == TAB {
@@ -103,7 +103,7 @@ public class ReadableCSVChannel {
         }
     }
 
-    # Closes the `io:ReadableCSVChannel`.
+    # Closes the readable CSV channel to release any underlying resources.
     # After a channel is closed, any further reading operations will cause an error.
     # ```ballerina
     # io:Error? err = readableCSVChannel.close();

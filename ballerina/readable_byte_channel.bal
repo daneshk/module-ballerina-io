@@ -27,20 +27,20 @@ public class ReadableByteChannel {
     isolated function init() {
     }
 
-    # Source bytes from a given input resource.
+    # Reads bytes from a given input resource.
     # This operation will be asynchronous in which the total number of required bytes might not be returned at a given
     # time. An `io:EofError` will return once the channel reaches the end.
     # ```ballerina
     # byte[]|io:Error result = readableByteChannel.read(1000);
     # ```
     #
-    # + nBytes - A positive integer. Represents the number of bytes, which should be read
+    # + nBytes - Represents the number of bytes, which should be read. This should be a positive integer.
     # + return - Content (the number of bytes) read, an `EofError` once the channel reaches the end or else an `io:Error`
     public isolated function read(int nBytes) returns byte[]|Error {
         return byteReadExtern(self, nBytes);
     }
 
-    # Read all content of the channel as a `byte` array and return a read only `byte` array.
+    # Reads all content of the channel as a `byte` array and return a read only `byte` array.
     # ```ballerina
     # byte[]|io:Error result = readableByteChannel.readAll();
     # ```
@@ -51,11 +51,11 @@ public class ReadableByteChannel {
         return <readonly & byte[]>readResult.cloneReadOnly();
     }
 
-    # Return a block stream that can be used to read all `byte` blocks as a stream.
+    # Returns a block stream that can be used to read all `byte` blocks as a stream.
     # ```ballerina
     # stream<io:Block, io:Error>|io:Error result = readableByteChannel.blockStream();
     # ```
-    # + blockSize - A positive integer. Size of the block.
+    # + blockSize - The size of the block. This should be a positive integer.
     # + return - A block stream or else an `io:Error`
     public isolated function blockStream(int blockSize) returns stream<Block, Error?>|Error {
         BlockStream blockStream = new (self, blockSize);
@@ -82,7 +82,7 @@ public class ReadableByteChannel {
         return base64DecodeExtern(self);
     }
 
-    # Closes the `io:ReadableByteChannel`.
+    # Closes the readable byte channel to release any underlying resources.
     # After a channel is closed, any further reading operations will cause an error.
     # ```ballerina
     # io:Error? err = readableByteChannel.close();

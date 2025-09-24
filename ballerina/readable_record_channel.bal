@@ -22,7 +22,7 @@ public class ReadableTextRecordChannel {
     private string rs;
     private string fs;
 
-    # Constructs a ReadableTextRecordChannel from a given ReadableCharacterChannel.
+    # Initializes a ReadableTextRecordChannel from a given ReadableCharacterChannel.
     #
     # + charChannel - CharacterChannel which will point to the input/output resource
     # + fs - Field separator (this could be a regex)
@@ -45,7 +45,7 @@ public class ReadableTextRecordChannel {
         return hasNextExtern(self);
     }
 
-    # Get the next record from the input/output resource.
+    # Reads the next record from the input/output resource.
     # ```ballerina
     # string[]|io:Error record = readableRecChannel.getNext();
     # ```
