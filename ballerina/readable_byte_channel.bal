@@ -15,9 +15,8 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# ReadableByteChannel represents an input resource (i.e file), which could be used to source bytes.
+# Represents a readable byte channel represents an input resource (i.e file), which could be used to source bytes.
 # A file path or an in-memory `byte` array can be used to obtain an `io:ReadableByteChannel`.
-# An `io:ReadableByteChannel` does not support initialization, and it should be obtained using the following methods or implemented natively.
 #
 # `io:openReadableFile("./files/sample.txt")` - used to obtain an `io:ReadableByteChannel` from a given file path
 # `io:createReadableChannel(byteArray)` - used to obtain an `io:ReadableByteChannel` from a given `byte` array

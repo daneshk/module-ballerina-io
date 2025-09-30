@@ -15,12 +15,12 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# The LineStream is a stream of the type strings(lines) and it refers to the stream that is embedded to the I/O character channels.
+# A stream of strings(lines) that is used to read the character content from the streams.
 public class LineStream {
     private ReadableCharacterChannel readableCharacterChannel;
     private boolean isClosed = false;
 
-    # Initializes a LineStream.
+    # Initializes A stream of strings(lines).
     #
     # + readableCharacterChannel - The `io:ReadableCharacterChannel` that the line stream is referred to
     public isolated function init(ReadableCharacterChannel readableCharacterChannel) {
@@ -43,8 +43,8 @@ public class LineStream {
         }
     }
 
-    # Closes the stream. This function is primarily used to close the stream before reaching the end.
-    # If the stream reaches the end, the next read operation will automatically close the stream.
+    # Closes the stream manually.
+    # If not invoked, the stream closes automatically upon reaching end-of-stream.
     #
     # + return - `()` when the closing was successful or an `io:Error`
     public isolated function close() returns Error? {

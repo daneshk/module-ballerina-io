@@ -19,9 +19,9 @@ import ballerina/jballerina.java;
 public class ReadableCSVChannel {
     private ReadableTextRecordChannel? dc;
 
-    # Initializes a CSV channel from a CharacterChannel to read CSV records.
+    # Initializes a readable CSV channel.
     #
-    # + byteChannel - The CharacterChannel, which will represent the content in the CSV file
+    # + byteChannel - The `io:ReadableCharacterChannel`, which will represent the content in the CSV file
     # + fs - The field separator, which will separate between the records in the CSV file
     # + nHeaders - Number of headers, which should be skipped prior to reading records
     public isolated function init(ReadableCharacterChannel byteChannel, Separator fs = ",", int nHeaders = 0) {
@@ -56,12 +56,12 @@ public class ReadableCSVChannel {
         }
     }
 
-    # Indicates whether there's another record, which could be read.
+    # Checks if there is another record available to be read from the CSV channel.
     # ```ballerina
     # boolean hasNext = readableCSVChannel.hasNext();
     # ```
     #
-    # + return - True if there is a record
+    # + return - True if there is another record available
     public isolated function hasNext() returns boolean {
         var recordChannel = self.dc;
         if recordChannel is ReadableTextRecordChannel {

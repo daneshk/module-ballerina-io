@@ -21,7 +21,7 @@ public class ReadableCharacterChannel {
     private ReadableByteChannel byteChannel;
     private string charset;
 
-    # Initializes an `io:ReadableCharacterChannel` from a given `io:ReadableByteChannel` and `Charset`.
+    # Initializes a readable character channel.
     #
     # + byteChannel - The `io:ReadableByteChannel`, which would be used to read the characters
     # + charset - The character set, which is used to encode/decode the given bytes to characters

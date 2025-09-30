@@ -15,12 +15,12 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# The CSVStream is a stream of type CSV records and it refers to the stream that is embedded to the I/O record channels.
+# A stream of CSV records that is used to read the CSV content from the streams.
 public class CSVStream {
     private ReadableTextRecordChannel readableTextRecordChannel;
     private boolean isClosed = false;
 
-    # Initializes a CSVStream.
+    # Initializes a stream of CSV records.
     #
     # + readableTextRecordChannel - The `io:ReadableTextRecordChannel` that this CSV stream is referred to
     public isolated function init(ReadableTextRecordChannel readableTextRecordChannel) {
@@ -44,8 +44,8 @@ public class CSVStream {
         }
     }
 
-    # Closes the stream. This function is primarily used to close the stream before reaching the end.
-    # If the stream reaches the end, the next read operation will automatically close the stream.
+    # Closes the stream manually.
+    # If not invoked, the stream closes automatically upon reaching end-of-stream.
     #
     # + return - `()` when the closing was successful or an `io:Error`
     public isolated function close() returns Error? {

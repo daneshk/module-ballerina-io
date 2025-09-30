@@ -18,13 +18,13 @@ import ballerina/jballerina.java;
 # The read-only byte array that is used to read the byte content from the streams.
 public type Block readonly & byte[];
 
-# The BlockStream is a stream of type `Block` and it refers to the stream that is embedded to the I/O byte channels.
+# A stream of `Block` objects that is used to read the byte content from the streams.
 public class BlockStream {
     private ReadableByteChannel readableByteChannel;
     private int blockSize;
     private boolean isClosed = false;
 
-    # Initializes a BlockStream.
+    # Initializes a stream of `Block` objects.
     #
     # + readableByteChannel - The `io:ReadableByteChannel` that this block stream is referred to
     # + blockSize - The size of a block as an integer
@@ -48,8 +48,8 @@ public class BlockStream {
         }
     }
 
-    # Closes the stream. This function is primarily used to close the stream before reaching the end.
-    # If the stream reaches the end, the next read operation will automatically close the stream.
+    # Closes the stream manually.
+    # If not invoked, the stream closes automatically upon reaching end-of-stream.
     #
     # + return - `()` when the closing was successful or an `io:Error`
     public isolated function close() returns Error? {

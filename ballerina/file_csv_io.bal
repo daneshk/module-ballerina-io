@@ -63,7 +63,7 @@ Error? {
     return channelWriteCsv(path, option, content);
 }
 
-# Write CSV record stream to a file.
+# Writes CSV record stream to a file.
 # When the input is a `stream<record, io:Error?>` in `OVERWRITE`, headers will be written to the CSV file.
 # For `APPEND`, order of the existing csv file is inferred using the headers.
 # ```ballerina

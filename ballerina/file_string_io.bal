@@ -96,7 +96,7 @@ Error? {
     return channelWriteLines(check openWritableFile(path, option), content);
 }
 
-# Write stream of lines to a file.
+# Writes a stream of lines to a file.
 # During the writing operation, a newline character `\n` will be added after each line.
 # ```ballerina
 # string content = ["Hello Universe..!!", "How are you?"];
