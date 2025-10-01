@@ -33,7 +33,7 @@ public class WritableDataChannel {
 
     # Initializes a writable data channel.
     #
-    # + byteChannel - The 'io:WritableByteChannel`, which would represent the source to read/write data
+    # + byteChannel - The `io:WritableByteChannel`, which would represent the source to read/write data
     # + bOrder - The network byte order, which specifies the order of bytes (e.g., `io:BIG_ENDIAN` or `io:LITTLE_ENDIAN`)
     public isolated function init(WritableByteChannel byteChannel, ByteOrder bOrder = "BE") {
         // Remove temp once this got fixed #19842
