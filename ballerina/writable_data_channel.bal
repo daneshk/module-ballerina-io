@@ -87,7 +87,7 @@ public class WritableDataChannel {
 
     # Writes a 64 bit float value to the writable data channel.
     # ```ballerina
-    # io:Error? err = dataChannel.writeFloat32(3.12);
+    # io:Error? err = dataChannel.writeFloat64(3.12);
     # ```
     #
     # + value - The 64-bit float value to be written to the data channel
