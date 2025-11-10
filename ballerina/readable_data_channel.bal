@@ -15,7 +15,7 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents a data channel for reading data.
+# A readable data channel to read primitive data types from a given `io:ReadableByteChannel`.
 public class ReadableDataChannel {
 
     # Initializes a readable data channel.

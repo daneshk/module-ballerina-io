@@ -14,7 +14,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# Represents a reader which will wrap string content as a channel.
+# A reader which will wrap string content as a channel.
 public class StringReader {
     private ReadableCharacterChannel? charChannel;
 

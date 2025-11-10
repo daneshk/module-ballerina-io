@@ -15,7 +15,7 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents a readable record channel.
+# A readable record channel that could be used to read records from a given `io:ReadableCharacterChannel`.
 public class ReadableTextRecordChannel {
 
     private ReadableCharacterChannel charChannel;

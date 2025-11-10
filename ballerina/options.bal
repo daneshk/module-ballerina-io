@@ -14,7 +14,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# Represents a file opening options for writing.
+# Options for opening a file for writing.
 #
 # + OVERWRITE - Overwrite(truncate the existing content)
 # + APPEND - Append to the existing content
@@ -23,7 +23,7 @@ public enum FileWriteOption {
     APPEND
 }
 
-# Represents the XML entity type that needs to be written.
+# Types of XML entities that can be written.
 #
 # + DOCUMENT_ENTITY - An XML document with a single root node
 # + EXTERNAL_PARSED_ENTITY - Externally parsed well-formed XML entity
@@ -43,7 +43,7 @@ public type XmlDoctype record {|
     string? internalSubset = ();
 |};
 
-# Represents the writing options of an XML.
+# Options for writing XML content.
 #
 # + xmlEntityType - The entity type of the XML input (the default value is `DOCUMENT_ENTITY`)
 # + doctype - XML DOCTYPE value (the default value is `()`)

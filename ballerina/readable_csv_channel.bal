@@ -15,7 +15,7 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents a readable CSV channel which could be used to read records from CSV file.
+# A readable CSV channel which could be used to read records from CSV file.
 public class ReadableCSVChannel {
     private ReadableTextRecordChannel? dc;
 

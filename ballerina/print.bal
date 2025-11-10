@@ -16,18 +16,18 @@
 
 import ballerina/jballerina.java;
 
-# Defines all the printable types.
+# All the types that can be printed.
 # 1. any typed value
 # 2. errors
 # 3. `io:PrintableRawTemplate` - an raw templated value
 public type Printable any|error|PrintableRawTemplate;
 
-# Defines the output streaming types.
+# The types of output streams.
 # 1. `stdout` - standard output stream
 # 2. `stderr` - standard error stream
 public type FileOutputStream stdout|stderr;
 
-# Represents raw templates.
+# The printable raw templates.
 # e.g: `The respective int value is ${val}`
 # + strings - String values of the template as an array
 # + insertions - Parameterized values/expressions after evaluations as an array

@@ -14,16 +14,16 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# Represents the record separator of the CSV file.
+# The record separator of the CSV file.
 public const string CSV_RECORD_SEPARATOR = "\n";
 
-# Represents the colon separator, which should be used to identify colon-separated files.
+# The colon separator, which should be used to identify colon-separated files.
 public const string FS_COLON = ":";
 
-# Represents the minimum number of headers, which will be included in the CSV.
+# The minimum number of headers, which will be included in the CSV.
 public const int MINIMUM_HEADER_COUNT = 0;
 
-# Represents a writable CSV channel, which could be used to write records from the CSV file.
+# A writable CSV channel, which could be used to write records from the CSV file.
 public class WritableCSVChannel {
     private WritableTextRecordChannel? dc;
 

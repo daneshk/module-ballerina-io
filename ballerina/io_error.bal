@@ -20,7 +20,7 @@ public type Error distinct error;
 # This will return when connection timed out happen when try to connect to a remote host.
 public type ConnectionTimedOutError distinct Error;
 
-# Represents generic IO error. The detail record contains the information related to the error.
+# This will get returned for generic IO errors. The detail record contains information related to the error.
 public type GenericError distinct Error;
 
 # This will get returned due to file permission issues.

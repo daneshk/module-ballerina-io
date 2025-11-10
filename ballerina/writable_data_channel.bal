@@ -15,20 +15,20 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents network byte order.
+# The network byte order.
 #
 # BIG_ENDIAN - specifies the bytes to be in the order of most significant byte first.
 #
 # LITTLE_ENDIAN - specifies the byte order to be the least significant byte first.
 public type ByteOrder "BE"|"LE";
 
-# Specifies the bytes to be in the order of most significant byte first.
+# The bytes to be in the order of most significant byte first.
 public const BIG_ENDIAN = "BE";
 
-# Specifies the byte order to be the least significant byte first.
+# The byte order to be the least significant byte first.
 public const LITTLE_ENDIAN = "LE";
 
-# Represents a writable data channel used for writing various types of data.
+# A writable data channel used for writing various types of data.
 public class WritableDataChannel {
 
     # Initializes a writable data channel.

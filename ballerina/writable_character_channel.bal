@@ -15,7 +15,7 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents a writable character channel used for writing characters.
+# A writable character channel used for writing characters.
 public class WritableCharacterChannel {
 
     private WritableByteChannel bChannel;

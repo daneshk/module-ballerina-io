@@ -15,7 +15,7 @@
 // under the License.
 import ballerina/jballerina.java;
 
-# Represents a writable text record channel that allows writing records.
+# A writable text record channel that allows writing records.
 public class WritableTextRecordChannel {
     private WritableCharacterChannel characterChannel;
     private string fs;
