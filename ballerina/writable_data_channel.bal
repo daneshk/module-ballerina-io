@@ -33,7 +33,7 @@ public class WritableDataChannel {
 
     # Initializes a writable data channel.
     #
-    # + byteChannel - The 'io:WritableByteChannel`, which would represent the source to read/write data
+    # + byteChannel - The `io:WritableByteChannel`, which would represent the source to read/write data
     # + bOrder - The network byte order, which specifies the order of bytes (e.g., `io:BIG_ENDIAN` or `io:LITTLE_ENDIAN`)
     public isolated function init(WritableByteChannel byteChannel, ByteOrder bOrder = "BE") {
         // Remove temp once this got fixed #19842
@@ -87,7 +87,7 @@ public class WritableDataChannel {
 
     # Writes a 64 bit float value to the writable data channel.
     # ```ballerina
-    # io:Error? err = dataChannel.writeFloat32(3.12);
+    # io:Error? err = dataChannel.writeFloat64(3.12);
     # ```
     #
     # + value - The 64-bit float value to be written to the data channel

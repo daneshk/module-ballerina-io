@@ -55,7 +55,7 @@ public isolated function fileReadCsvAsStream(string path, typedesc<string[]|map<
 # io:Error? resultRecord = io:fileWriteCsv("./resources/myfileRecord.csv", contentRecord);
 # ```
 # + path - The CSV file path
-# + content - CSV content as an two-dimensional string array or a Ballerina records array
+# + content - CSV content as a two-dimensional string array or a Ballerina records array
 # + option - Indicate whether to overwrite or append the given content
 # + return - `()` when the writing was successful or an `io:Error`
 public isolated function fileWriteCsv(string path, string[][]|map<anydata>[] content, FileWriteOption option = OVERWRITE) returns

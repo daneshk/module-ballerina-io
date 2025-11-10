@@ -27,7 +27,7 @@ public isolated function openReadableFile(string path) returns ReadableByteChann
     'class: "io.ballerina.stdlib.io.nativeimpl.ByteChannelUtils"
 } external;
 
-# Retrieves a writable byte channel` from a given file path.
+# Retrieves a writable byte channel from a given file path.
 # ```ballerina
 # io:WritableByteChannel writableFileResult = check io:openWritableFile("./files/sampleResponse.txt");
 # ```
